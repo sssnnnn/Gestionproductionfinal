@@ -36,6 +36,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //Route::get('dashboard', DashboardController::class)->name('dashboard');
 Route::get('dashboard', [App\Http\Controllers\CommandeController::class, 'index'])->name('home');
 
+
 Route::get('clients', ListClients::class)->name('clients.list-clients');
 Route::get('articles', ListArticles::class)->name('articles.list-articles');
 Route::get('commandes', ListCommandes::class)->name('commandes.list-commandes');
